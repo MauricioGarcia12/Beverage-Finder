@@ -2,8 +2,8 @@ import React, {useContext} from 'react'
 import {CategoriaContext} from '../context/CategoriaContext'
 const Formulario = () => {
 
-    const {hola} = useContext(CategoriaContext);
-    alert(hola)
+    const {categorias} = useContext(CategoriaContext);
+    console.log(categorias)
 
     return (
         
