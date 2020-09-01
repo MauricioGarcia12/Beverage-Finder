@@ -1,5 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {ModalContext} from '../context/ModalContext'
+
 const Receta = ({receta}) => {
+    //extraer los valores del context
+    const {guadarIdReceta} =useContext(ModalContext)
+
     return ( 
     <div className="col-md-4 mb-3">
         <div className="card">
@@ -9,6 +14,9 @@ const Receta = ({receta}) => {
                 <button 
                 type='button'
                 className='btn btn-primary btn-block'
+                onClick={ ()=>{
+                    guadarIdReceta(receta.idDrink)
+                } }
                 >Ver Receta
                 </button>
             </div>
